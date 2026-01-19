@@ -15,7 +15,9 @@
         <li><a href="{{url('/degrees')}}">Degrees</a></li>
         <li><a href="{{ url('/courses') }}">Courses</a></li>
         <li><a href="{{ url('/showLogin') }}">Login</a></li>
+        @auth
         <li><a href="{{ url('/logout') }}">Logout</a></li>
+        @endauth
         <li> <div class="dropdown">
                 <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">

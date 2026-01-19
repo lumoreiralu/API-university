@@ -22,7 +22,7 @@
                         </td>
                         <td>
                             <ul class="courses-list">
-                                {{-- 'materias' es la relación definida en el modelo --}}
+
                                 @foreach ($degree->materias as $materia) 
                                     <li>{{ $materia->nombre_materia }}</li>
                                 @endforeach

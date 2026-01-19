@@ -16,6 +16,7 @@
                             <span>Degree:</span>{{$course->carrera->nombre_carrera}}
                         </p>
                     </div>
+                    @auth
                     <div class="card-footer">
                         <div class="actions-group">                          
                             <a href="{{url('formUpdateCourse/'.$course->id)}}" class="btn-action " title="Editar course">
@@ -34,6 +35,7 @@
                             </form>
                         </div>
                     </div>
+                    @endauth
                 </article>
                 @endforeach
         </div>

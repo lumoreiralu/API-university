@@ -30,7 +30,7 @@ class DegreeController extends Controller
     public function formUpdateDegree($id)
     {
         $degree = DegreeModel::findOrFail($id);
-        return view('degree.form-update-degree', compact('degree'));
+        return view('degree.form-updateDegree', compact('degree'));
     }
 
     public function updateDegree(Request $request, $id)

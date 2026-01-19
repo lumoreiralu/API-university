@@ -5,26 +5,31 @@
     <div class="form-wrapper">
         <section class="form-card">
             <header class="form-header">
-                <h2>Add New Degree</h2>
-                <p>Register a new academic program</p>
+                <h2>Update Degree</h2>
             </header>
 
-            <form action="newDegree" method="POST">
-                @csrf
+            <form action="{{url('updateDegree/' . $degree->id_carrera  )}}" method="POST">
+            @csrf
+            @method('PUT')
                 <div class="input-group">
                     <label for="nombre_carrera">Degree Name</label>
-                    <input type="text" id="nombre_carrera" name="nombre_carrera" placeholder="e.g. Software Engineering" required>
+                    <input type="text" id="nombre_carrera" name="nombre_carrera" 
+                        value="{{ old('nombre_carrera', $degree->nombre_carrera) }}" required>
                 </div>
 
                 <div class="input-group">
                     <label for="duracion">Duration</label>
-                    <input type="text" id="duracion" name="duracion" placeholder="e.g. 5 Years" required>
+                    <input type="text" id="duracion" name="duracion" 
+                        value="{{ old('duracion', $degree->duracion) }}" required>
                 </div>
 
-                <button type="submit" class="btn-submit">Add Degree</button>
+                <button type="submit" class="btn-submit">Update Degree</button>
+                <a href="{{ url('/home') }}" class="btn-action">Cancel</a>
             </form>
         </section>
+
     </div>
+
 </main>
 
 

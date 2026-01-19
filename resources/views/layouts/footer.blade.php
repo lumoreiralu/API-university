@@ -1,6 +1,6 @@
 
 <footer>
-    University Hello Wordl
+    University Hello World
 </footer>
 </body>
 </html>

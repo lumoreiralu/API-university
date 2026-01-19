@@ -27,15 +27,22 @@
                             <a href="{{ url('degree/' . $degree->id_carrera) }}" class="btn-action" title="Ver detalles">
                                 <span>👁️</span> Details
                             </a>
-                            
+                            @auth
                             <a href="{{ url('formUpdateDegree/' . $degree->id_carrera) }}" class="btn-action" title="Editar carrera">
                                 <span>✏️</span> Edit
                             </a>
                             
-                            <a href="{{ url('deleteDegree/' . $degree->id_carrera) }}" class="btn-action" 
-                               onclick="return confirm('¿Are you sure?');" title="DELETE">
-                                <span>🗑️</span> Delete
-                            </a>
+                            <form action="{{ url('deleteDegree/' . $degree->id_carrera) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE') 
+                                
+                                <button type="submit" class="btn-action" 
+                                        onclick="return confirm('¿Are you sure?');" 
+                                        style="border:none; background:none; cursor:pointer; font-family: inherit;">
+                                    <span>🗑️</span> Delete
+                                </button>
+                            </form>
+                            @endauth
                         </div>
                     </div>
                 </article>
