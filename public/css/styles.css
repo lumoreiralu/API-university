@@ -190,7 +190,7 @@
     border: 1px solid #ced4da;
     border-radius: 8px;
     font-size: 1rem;
-    box-sizing: border-box; /* Evita que el input se salga del cuadro */
+    box-sizing: border-box; 
     transition: border-color 0.3s, box-shadow 0.3s;
   }
   
@@ -202,7 +202,7 @@
   
   .btn-submit {
     width: 100%;
-    background-color: #98b1ad; /* El mismo verde de tu header */
+    background-color: #98b1ad; 
     color: white;
     padding: 14px;
     border: none;
@@ -219,7 +219,7 @@
   }
   
   .page-content {
-    flex: 1; /* Esto empuja el footer hacia abajo */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,14 +250,14 @@
     font-size: 2rem;
   }
   
-  /* Grid de Carreras */
+
   .degrees-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
   }
   
-  /* Tarjeta Individual */
+
   .degree-card {
     background: white;
     border-radius: 12px;
@@ -275,7 +275,7 @@
   }
   
   .card-icon {
-    background-color: #98b1ad; /* El verde de tu header */
+    background-color: #98b1ad; 
     height: 80px;
     display: flex;
     justify-content: center;
@@ -304,7 +304,7 @@
     color: #98b1ad;
   }
   
-  /* Botón de la Tarjeta */
+
   .card-footer {
     padding: 15px 20px;
     background: #f8fafc;

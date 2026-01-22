@@ -27,14 +27,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/formNewDegree', [DegreeController::class, 'showFormNewDegree']);
     Route::post('/newDegree', [DegreeController::class, 'newDegree'])->name('degrees.store');
     Route::get('/formUpdateDegree/{id}', [DegreeController::class, 'formUpdateDegree']);
-    Route::post('/updateDegree/{id}', [DegreeController::class, 'updateDegree']);
+    Route::put('/updateDegree/{id}', [DegreeController::class, 'updateDegree']);
     Route::delete('/deleteDegree/{id}', [DegreeController::class, 'deleteDegree']);
 
     // Cursos (Courses)
     Route::get('/formNewCourse', [CourseController::class, 'showFormNewCourse']);
     Route::post('/newCourse', [CourseController::class, 'newCourse'])->name('courses.store');
     Route::get('/formUpdateCourse/{id}', [CourseController::class, 'formUpdateCourse']);
-    Route::post('/updateCourse/{id}', [CourseController::class, 'updateCourse']);
+    Route::put('/updateCourse/{id}', [CourseController::class, 'updateCourse']);
     Route::delete('/deleteCourse/{id}', [CourseController::class, 'deleteCourse']);
 
     Route::get('/logout', [UserController::class, 'logout']);

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CourseModel extends Model
 {
-    // Nombre de la tabla en tu DB
+
     protected $table = 'Materia'; 
 
     public $timestamps = false;

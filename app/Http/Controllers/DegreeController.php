@@ -21,12 +21,11 @@ class DegreeController extends Controller
 
     public function showDegree($id)
     {
-        // Cargamos las materias para mostrarlas en el detalle
         $degree = DegreeModel::with('materias')->findOrFail($id);
         return view('degree.degree-id', compact('degree'));
     }
 
-    // Corregido: Agregamos el tipo Request y quitamos parámetros innecesarios en formularios
+
     public function formUpdateDegree($id)
     {
         $degree = DegreeModel::findOrFail($id);
